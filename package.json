@@ -1,0 +1,23 @@
+{
+  "name": "react-study",
+  "version": "1.0.0",
+  "description": "hello react-study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sju02048/react-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sju02048/react-study/issues"
+  },
+  "homepage": "https://github.com/sju02048/react-study#readme",
+  "dependencies": {
+    "randomcolor": "^0.6.2"
+  }
+}
