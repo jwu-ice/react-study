@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ButtonContainer, Container } from "./style";
 
 const DiaryEditor = () => {
+  const authorInput = useRef();
+  const contentInput = useRef();
+  console.log("authorInput", authorInput);
+
   const [diaryData, setDiaryData] = useState({
     author: "",
     content: "",
@@ -17,8 +21,17 @@ const DiaryEditor = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    console.log(diaryData);
+  const handleSubmit = () => {
+    if (diaryData.author.length < 1) {
+      authorInput.current.focus();
+      return;
+    }
+
+    if (diaryData.content.length < 1) {
+      contentInput.current.focus();
+      return;
+    }
+
     alert("저장 성공");
   };
 
@@ -26,10 +39,22 @@ const DiaryEditor = () => {
     <Container>
       <h1>오늘의 일기</h1>
       <div>
-        <input name="author" value={diaryData.author} onChange={handleChangeData} placeholder={"입력하세요"} />
+        <input
+          name="author"
+          value={diaryData.author}
+          onChange={handleChangeData}
+          placeholder={"작성자를 입력해주세요."}
+          ref={authorInput}
+        />
       </div>
       <div>
-        <textarea name="content" value={diaryData.content} placeholder={"입력하세요"} onChange={handleChangeData} />
+        <textarea
+          name="content"
+          value={diaryData.content}
+          onChange={handleChangeData}
+          placeholder={"일기 내용을 입력해주세요."}
+          ref={contentInput}
+        />
       </div>
       <div>
         {"오늘의 감정점수 : "}

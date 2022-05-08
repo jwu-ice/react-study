@@ -32,5 +32,5 @@ export const Container = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-  align-content: flex-end;
+  align-self: flex-end;
 `;
