@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// Editor
+
 export const Container = styled.div`
   border: 1px solid gray;
   display: flex;

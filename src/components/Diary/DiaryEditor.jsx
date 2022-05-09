@@ -1,10 +1,9 @@
 import React, { useState, useRef } from "react";
-import { ButtonContainer, Container } from "./style";
+import { ButtonContainer, Container } from "./DiaryEditor.style";
 
 const DiaryEditor = () => {
   const authorInput = useRef();
   const contentInput = useRef();
-  console.log("authorInput", authorInput);
 
   const [diaryData, setDiaryData] = useState({
     author: "",
